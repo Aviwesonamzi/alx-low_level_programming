@@ -1,0 +1,13 @@
+# Name of the executable
+EXECUTABLE := school
+
+# The 'all' rule
+all: $(EXECUTABLE)
+
+# Rule for building the executable
+$(EXECUTABLE):
+\tgcc -o $(EXECUTABLE) main.c
+
+# Clean rule to remove the executable
+clean:
+\trm -f $(EXECUTABLE)
