@@ -1,8 +1,7 @@
-# Compiler to be used
 CC := gcc
 
 # Source files
-SRC := $(wildcard *.c)
+SRC := school.c main.c # Add all your .c files here
 
 # Name of the executable
 EXECUTABLE := school
