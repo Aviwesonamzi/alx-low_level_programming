@@ -1,0 +1,26 @@
+# Compiler to be used
+CC := gcc
+
+# Name of the executable
+NAME := school
+
+# Source files (with wildcard to get all .c files)
+SRC := $(wildcard *.c)
+
+# Object files (replace .c from SRC with .o)
+OBJ := $(SRC:.c=.o)
+
+# The 'all' rule
+all: $(NAME)
+
+# Rule to compile each .c to .o
+%.o: %.c
+\t$(CC) -c $< -o $@
+
+# Rule for building the executable
+$(NAME): $(OBJ)
+\t$(CC) $(OBJ) -o $(NAME)
+
+# Clean rule to remove object files and executable
+clean:
+\trm -f $(OBJ) $(NAME)
