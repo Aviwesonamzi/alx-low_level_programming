@@ -1,18 +1,10 @@
-CC := gcc
+CC = gcc
+SRC = $(wildcard *.c)
 
-# Source files
-SRC := school.c main.c # Add all your .c files here
+school: $(SRC)
+	$(CC) -o school $(SRC)
 
-# Name of the executable
-EXECUTABLE := school
+all: school
 
-# The 'all' rule
-all: $(EXECUTABLE)
-
-# Rule for building the executable
-$(EXECUTABLE): $(SRC)
-	$(CC) -o $@ $^
-
-# Clean rule to remove the executable
 clean:
-	rm -f $(EXECUTABLE)
+	rm -f school
