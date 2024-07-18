@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "search_algos.h"
+#include "../search_algos.h"
 
 /**
  * print_list - Prints a singly linked list

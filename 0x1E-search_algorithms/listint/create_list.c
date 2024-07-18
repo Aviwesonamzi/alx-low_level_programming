@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "search_algos.h"
+#include "../search_algos.h"
 
 /**
  * create_list - Creates a singly linked list from an array of integers
